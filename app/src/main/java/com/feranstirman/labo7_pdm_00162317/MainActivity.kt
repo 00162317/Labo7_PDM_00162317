@@ -2,6 +2,7 @@ package com.feranstirman.labo7_pdm_00162317
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        bind()
     }
 
     fun bind(){
@@ -32,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             adapter.updateList(it)
         })
         btn_add.setOnClickListener {
+            Log.d("oki",et_repo_name.text.toString())
             viewModel.insert(GitHubRepo(et_repo_name.text.toString()))
         }
     }
