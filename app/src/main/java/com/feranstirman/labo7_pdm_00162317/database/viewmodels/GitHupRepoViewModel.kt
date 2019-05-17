@@ -23,8 +23,7 @@ class GitHupRepoViewModel(app:Application):AndroidViewModel(app){
     fun getAll():LiveData<List<GitHubRepo>> = repository.getAll()
 
     fun insert(repo: GitHubRepo)=viewModelScope.launch (Dispatchers.IO){
-
-
+        repository.insert(repo)
     }
 
 }
