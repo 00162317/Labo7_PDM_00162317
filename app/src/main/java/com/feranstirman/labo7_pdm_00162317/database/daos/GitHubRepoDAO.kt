@@ -8,4 +8,8 @@ import com.feranstirman.labo7_pdm_00162317.database.entities.GitHubRepo
 interface GitHubRepoDAO{
 
     fun getAll():LiveData<List<GitHubRepo>>
+
+    fun insert(repo:GitHubRepo)
+
+    fun nukeTable()
 }
