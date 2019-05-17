@@ -24,6 +24,7 @@ class ReposAdapter(var repos:List<GitHubRepo>):RecyclerView.Adapter<ReposAdapter
         holder.bind(repos[position])
     }
 
+
     fun updateList(newRepos:List<GitHubRepo>){
         this.repos=newRepos
         notifyDataSetChanged()
