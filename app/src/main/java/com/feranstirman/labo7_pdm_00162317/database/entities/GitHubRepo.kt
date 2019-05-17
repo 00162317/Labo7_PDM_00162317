@@ -9,6 +9,7 @@ data class GitHubRepo(
     @ColumnInfo(name = "s_name")
     val name:String
 ){
+
     @PrimaryKey(autoGenerate = true)
     var id:Long=0
 }
